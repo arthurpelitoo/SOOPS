@@ -1,0 +1,6 @@
+/**
+ * As classes DAO (Data Access Object) são responsáveis por executar os
+ * SQL junto ao banco de dados.
+ */
+
+ 

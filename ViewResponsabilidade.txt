@@ -1,0 +1,5 @@
+
+/**
+ * Apresentar todas as informações para o usuario,
+ * seja ele o dono do sistema ou cliente, dando a visão do sistema implementado em si.
+ */
