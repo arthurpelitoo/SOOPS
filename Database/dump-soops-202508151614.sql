@@ -118,6 +118,7 @@ CREATE TABLE `usuario` (
   `nm_usuario` varchar(50) NOT NULL,
   `email` varchar(64) NOT NULL,
   `senha` char(16) NOT NULL,
+  `tipo_usuario` ENUM('usuario', 'adminastror') NOT NULL DEFAULT 'usuario',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
