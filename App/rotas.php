@@ -1,6 +1,6 @@
 <?php
 
-// include 'Controller/UsuarioController.php';
+use App\Controller\UsuarioController;
 
 $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 // serve para ler o que está na url depois da barra

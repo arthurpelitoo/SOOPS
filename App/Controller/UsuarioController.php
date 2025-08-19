@@ -1,5 +1,9 @@
 <?php
 
+namespace App\Controller;
+
+use App\Model\UsuarioModel;
+
 class UsuarioController
 {
     // a rota /usuario entrega a listagem de toda a tabela usuario.

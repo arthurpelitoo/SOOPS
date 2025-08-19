@@ -18,6 +18,11 @@
 
 // 👉 Exemplos de SGBDs: MySQL(olha ele aí!), PostgreSQL, Oracle, SQL Server, MariaDB, SQLite.
 
+namespace App\DAO;
+
+use App\Model\UsuarioModel;
+use \PDO;
+
 class UsuarioDAO
 
 {
@@ -72,7 +77,7 @@ class UsuarioDAO
         $stmt->bindValue(1, $id);
         $stmt->execute();
 
-        return $stmt->fetchObject('UsuarioModel');
+        return $stmt->fetchObject('App\Model\UsuarioModel');
     }
 
     public function UpdateUsuario(UsuarioModel $model)

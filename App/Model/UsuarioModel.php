@@ -1,6 +1,8 @@
 <?php
 
+namespace App\Model;
 
+use App\DAO\UsuarioDAO;
 
 class UsuarioModel
 {
