@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.19, for Win64 (x86_64)
 --
--- Host: localhost    Database: soops
+-- Host: localhost    Database: Budgetlance
 -- ------------------------------------------------------
 -- Server version	5.5.5-10.4.32-MariaDB
 
@@ -118,7 +118,7 @@ CREATE TABLE `usuario` (
   `nm_usuario` varchar(50) NOT NULL,
   `email` varchar(64) NOT NULL,
   `senha` char(16) NOT NULL,
-  `tipo_usuario` ENUM('usuario', 'adminastror') NOT NULL DEFAULT 'usuario',
+  `tipo_usuario` enum('usuario','adm') NOT NULL DEFAULT 'usuario',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -133,7 +133,7 @@ LOCK TABLES `usuario` WRITE;
 UNLOCK TABLES;
 
 --
--- Dumping routines for database 'soops'
+-- Dumping routines for database 'Budgetlance'
 --
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -145,4 +145,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-08-15 16:14:39
+-- Dump completed on 2025-08-18 22:08:24

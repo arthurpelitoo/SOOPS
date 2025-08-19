@@ -5,7 +5,7 @@ class UsuarioController
     // a rota /usuario entrega a listagem de toda a tabela usuario.
     public static function index()
     {
-        include "Model/UsuarioModel.php";
+        //traz o model pra transportar os dados da Controller até a DAO e vice versa
         $model = new UsuarioModel();
 
         $model->getAllRows();
@@ -17,7 +17,7 @@ class UsuarioController
     public static function form() 
     {
         //traz o model pra transportar os dados da Controller até a DAO e vice versa
-        include "Model/UsuarioModel.php";
+        
         // instancia a classe
         $model = new UsuarioModel();
 
@@ -34,7 +34,7 @@ class UsuarioController
     public static function save()
     {
         //traz o model pra transportar os dados da Controller até a DAO
-        include "Model/UsuarioModel.php";
+        
         // instancia a classe e define os atributos para salvamento
         $model = new UsuarioModel();
 
@@ -53,7 +53,7 @@ class UsuarioController
     public static function delete()
     {
         //traz o model pra transportar os dados da Controller até a DAO
-        include "Model/UsuarioModel.php";
+        
         // instancia a classe
         $model = new UsuarioModel();
 

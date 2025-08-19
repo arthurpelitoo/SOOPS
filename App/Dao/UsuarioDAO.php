@@ -27,7 +27,7 @@ class UsuarioDAO
     public function __construct()
     {
         // o dsn tem que receber o host(que no caso é localhost e a porta aqui por enquanto) e tambem o nome do banco de dados
-        $dsn = "mysql:host=localhost:3306;dbname=soops";
+        $dsn = "mysql:host=localhost:3306;dbname=Budgetlance";
 
         $this->conexao = new PDO($dsn, 'root', ''); // o PDO Representa uma conexao entre o PHP e um banco de dados server. Ele pede ($dsn(data source name), nome do usuario no host, senha do host)
     }
@@ -56,7 +56,9 @@ class UsuarioDAO
         // pega todos os registros da tabela Usuario
 
         $stmt = $this->conexao->prepare($sql);
-        $stmt->execute();
+        
+
+        $stmt->execute(); 
 
         return $stmt->fetchAll(PDO::FETCH_CLASS);
         // e vai retornar eles na forma de um array de objeto.
@@ -64,7 +66,6 @@ class UsuarioDAO
 
     public function ReadById(int $id)
     {
-        include_once 'Model/UsuarioModel.php';
 
         $sql = "SELECT * FROM usuario WHERE id = ?";
         $stmt = $this->conexao->prepare($sql);

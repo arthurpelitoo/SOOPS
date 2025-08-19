@@ -13,7 +13,6 @@ class UsuarioModel
     {
         //vai salvar os usuarios.
         // o metodo save tem que chamar o arquivo da camada DAO(que faz conexao com banco de dados) e passar todos os dados do formulario direto para ele.
-        include "Dao/UsuarioDAO.php";
 
         $dao = new UsuarioDAO();
 
@@ -32,7 +31,6 @@ class UsuarioModel
     public function getAllRows()
     {
         //Vai ler e pegar todas as linhas ou seja dar um Select * from usuario.
-        include "Dao/UsuarioDAO.php";
 
         $dao = new UsuarioDAO();
 
@@ -44,8 +42,6 @@ class UsuarioModel
     public function getById(int $id)
     {
         
-        include "Dao/UsuarioDAO.php";
-
         $dao = new UsuarioDAO();
 
         $obj = $dao->ReadById($id);
@@ -60,7 +56,6 @@ class UsuarioModel
 
     public function delete(int $id)
     {
-        include "Dao/UsuarioDAO.php";
 
         $dao = new UsuarioDAO();
 
