@@ -45,6 +45,14 @@
                     </a>
                 </td>
             </tr>
+        <?php elseif(count($model->rows) > 0): ?>
+            <tr>
+                <td colspan="7">
+                    <a href="/usuario/form">
+                        Deseja Cadastrar mais Usuarios?
+                    </a>
+                </td>
+            </tr>
         <?php endif?>
     </table>
 </body>

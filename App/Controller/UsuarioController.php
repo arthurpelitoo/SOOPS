@@ -2,9 +2,10 @@
 
 namespace App\Controller;
 
+use App\Controller\Controller;
 use App\Model\UsuarioModel;
 
-class UsuarioController
+class UsuarioController extends Controller
 {
     // a rota /usuario entrega a listagem de toda a tabela usuario.
     public static function index()
@@ -14,7 +15,9 @@ class UsuarioController
 
         $model->getAllRows();
         
-        include 'View/modules/Usuario/ListaUsuario.php';
+        $viewFile = "ListaUsuario";
+        parent::render($viewFile, $model);
+        
     }
 
     // a rota /usuario/form entrega o formulario da tabela usuario.
@@ -32,7 +35,8 @@ class UsuarioController
             $model = $model->getById((int) $_GET['id']); // O (int) evita sqlInjection, sendo um type cast explícito. Ele converte o valor recebido (nesse caso, uma string que veio da URL) para o tipo inteiro.
         }
 
-        include 'View/modules/Usuario/FormUsuario.php';
+        $viewFile = "FormUsuario";
+        parent::render($viewFile, $model);
     }
 
     public static function save()

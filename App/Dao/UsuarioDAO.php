@@ -20,21 +20,17 @@
 
 namespace App\DAO;
 
+use App\Dao\DAO;
 use App\Model\UsuarioModel;
 use \PDO;
 
-class UsuarioDAO
+class UsuarioDAO extends DAO
 
 {
 
-    private $conexao;
-
     public function __construct()
     {
-        // o dsn tem que receber o host(que no caso é localhost e a porta aqui por enquanto) e tambem o nome do banco de dados
-        $dsn = "mysql:host=localhost:3306;dbname=Budgetlance";
-
-        $this->conexao = new PDO($dsn, 'root', ''); // o PDO Representa uma conexao entre o PHP e um banco de dados server. Ele pede ($dsn(data source name), nome do usuario no host, senha do host)
+        parent::__construct();
     }
 
     public function CreateUsuario(UsuarioModel $model)

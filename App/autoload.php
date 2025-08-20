@@ -1,8 +1,13 @@
 <?php
 
 spl_autoload_register(function ($nome_da_classe){
-    echo "Tentou dar include de " . $nome_da_classe . "</br>";
-    //      Tentou dar include de App\Controller\UsuarioController
 
-    include "../" . $nome_da_classe . '.php';
+    $arquivo = BASE_DIR . $nome_da_classe . '.php';
+
+    if(file_exists($arquivo))
+    {
+        include $arquivo;
+    } else
+        exit('Arquivo não encontrado. Arquivo: ' . $arquivo);
+
 });

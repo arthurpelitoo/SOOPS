@@ -4,12 +4,9 @@ namespace App\Model;
 
 use App\DAO\UsuarioDAO;
 
-class UsuarioModel
+class UsuarioModel extends Model
 {
     public $id, $nm_usuario, $email, $senha, $tipo_usuario = "usuario";
-
-    public $rows;
-    // vai armazenar todas as linhas que vierem do banco de dados;
 
     public function save()
     {
